@@ -34,10 +34,10 @@ public class App {
 		CadastroClienteView cadastroClienteView = new CadastroClienteView();
 		
 		IndexController indexController = new IndexController(indexView, cupomView);
-		CupomController cupomController = new CupomController(cupomView, cadastroClienteView);
-		CadastroClienteController cadastroClienteController = new CadastroClienteController(cadastroClienteView);
+		CupomController cupomController = new CupomController(cupomView, cadastroClienteView, indexView);
+		CadastroClienteController cadastroClienteController = new CadastroClienteController(cadastroClienteView, cupomView);
 		
-		gerenciadorCupom.run();
+//		gerenciadorCupom.start();
 		
 	}
 }
